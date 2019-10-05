@@ -11,7 +11,12 @@ public class DissolveTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            meshRenderer.material.SetFloat(DissolveTriggerPropertyId, Time.time);
+            StartDissolve();
         }
+    }
+
+    public void StartDissolve()
+    {
+        meshRenderer.material.SetFloat(DissolveTriggerPropertyId, Time.time);
     }
 }
